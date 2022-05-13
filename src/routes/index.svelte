@@ -14,19 +14,19 @@
 		{
 			title: 'By Framework',
 			links: [
-				{ href: 'http://js.iamrivas.com/', title: 'Vanilla JS' },
-				{ href: 'http://react.iamrivas.com/', title: 'React' },
-				{ href: 'http://vue.iamrivas.com/', title: 'Vue' },
-				{ href: 'http://svelte.iamrivas.com/', title: 'Svelt' },
-				{ href: 'http://ng.iamrivas.com/', title: 'Angular' },
-				{ href: 'http://d8.iamrivas.com/', title: 'Drupal' }
+				{ href: 'http://js.iamrivas.com/', title: 'Vanilla JS', enabled: false },
+				{ href: 'http://react.iamrivas.com/', title: 'React', enabled: true },
+				{ href: 'http://vue.iamrivas.com/', title: 'Vue', enabled: false },
+				{ href: 'http://svelte.iamrivas.com/', title: 'Svelte', enabled: false },
+				{ href: 'http://ng.iamrivas.com/', title: 'Angular', enabled: false },
+				{ href: 'http://d8.iamrivas.com/', title: 'Drupal', enabled: true }
 			]
 		},
 		{
 			title: 'By SSR stack',
 			links: [
-				{ href: 'http://sveltekit.iamrivas.com/', title: 'SveltKit' },
-				{ href: 'http://gatsby.iamrivas.com/', title: 'React / Drupal / Gatsby' }
+				{ href: 'http://sveltekit.iamrivas.com/', title: 'SveltKit', enabled: false },
+				{ href: 'http://gatsby.iamrivas.com/', title: 'React / Drupal / Gatsby', enabled: true }
 			]
 		}
 	];
@@ -103,7 +103,7 @@
 			<ul style="margin:0.5rem 0 2rem 0">
 				{#each group.links as link}
 					<li>
-						<a href={link.href} target="_blank">{link.title}</a>
+						<a href={link.href} target="_blank" class:disable={!link.enabled}>{link.title}</a>
 					</li>
 				{/each}
 			</ul>
@@ -128,5 +128,11 @@
 	}
 	a:hover {
 		color: #000;
+	}
+
+	.disable {
+		color: #ccc;
+		pointer-events: none;
+		text-decoration: line-through;
 	}
 </style>
