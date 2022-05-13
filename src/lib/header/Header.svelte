@@ -8,7 +8,7 @@
 		<img src={logo} alt="SvelteKit" style="width:auto;height:50px" />
 	</div>
 
-	<nav>
+	<!-- <nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
@@ -24,7 +24,7 @@
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
 		</svg>
-	</nav>
+	</nav> -->
 
 	<div class="corner">
 		<!-- TODO put something else here? github link? -->
@@ -46,9 +46,7 @@
 	}
 
 	.corner img {
-		margin: 0.5em;
-		width: 2em;
-		height: 2em;
+		margin: 1rem;
 		object-fit: contain;
 	}
 

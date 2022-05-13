@@ -11,13 +11,24 @@
 
 	let spin = 0;
 	let links = [
-		{ href: 'http://js.iamrivas.com/', title: 'Vanilla JS' },
-		{ href: 'http://react.iamrivas.com/', title: 'React' },
-		{ href: 'http://vue.iamrivas.com/', title: 'Vue' },
-		{ href: 'http://svelte.iamrivas.com/', title: 'SveltKit' },
-		{ href: 'http://ng.iamrivas.com/', title: 'Angular' },
-		{ href: 'http://d8.iamrivas.com/', title: 'Drupal' },
-		{ href: 'http://gatsby.iamrivas.com/', title: 'React/Drupal/Gatsby' }
+		{
+			title: 'By Framework',
+			links: [
+				{ href: 'http://js.iamrivas.com/', title: 'Vanilla JS' },
+				{ href: 'http://react.iamrivas.com/', title: 'React' },
+				{ href: 'http://vue.iamrivas.com/', title: 'Vue' },
+				{ href: 'http://svelte.iamrivas.com/', title: 'Svelt' },
+				{ href: 'http://ng.iamrivas.com/', title: 'Angular' },
+				{ href: 'http://d8.iamrivas.com/', title: 'Drupal' }
+			]
+		},
+		{
+			title: 'By SSR stack',
+			links: [
+				{ href: 'http://sveltekit.iamrivas.com/', title: 'SveltKit' },
+				{ href: 'http://gatsby.iamrivas.com/', title: 'React / Drupal / Gatsby' }
+			]
+		}
 	];
 
 	SC.onFrame(() => {
@@ -61,7 +72,7 @@
 		/>
 	</SC.Group>
 
-	<SC.Group position={[0, 0, 0]} rotation={[0, spin, 0]}>
+	<SC.Group position={[0.5, 0, 0]} rotation={[0, spin, 0]}>
 		{#each [0, 1] as i}
 			{#each [0, 1] as j}
 				{#each [0, 1] as k}
@@ -85,13 +96,19 @@
 	<SC.DirectionalLight intensity={0.6} position={[-2, 3, 2]} shadow={{ mapSize: [2048, 2048] }} />
 </SC.Canvas>
 <section>
-	<ul>
-		{#each links as link}
-			<li>
-				<a href={link.href} target="_blank">{link.title}</a>
-			</li>
+	<div style="padding:1rem;background:rgba(255,255,255,0.5)">
+		<h1 style="margin-top:0.5rem">Portfolio</h1>
+		{#each links as group}
+			<strong>{group.title}</strong>
+			<ul style="margin:0.5rem 0 2rem 0">
+				{#each group.links as link}
+					<li>
+						<a href={link.href} target="_blank">{link.title}</a>
+					</li>
+				{/each}
+			</ul>
 		{/each}
-	</ul>
+	</div>
 </section>
 
 <style>
@@ -106,7 +123,10 @@
 	}
 
 	a {
-		color: #444;
+		color: #666;
 		text-decoration: underline;
+	}
+	a:hover {
+		color: #000;
 	}
 </style>
