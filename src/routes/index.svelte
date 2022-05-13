@@ -10,6 +10,15 @@
 	import type { Texture } from 'three';
 
 	let spin = 0;
+	let links = [
+		{ href: 'http://js.iamrivas.com/', title: 'Vanilla JS' },
+		{ href: 'http://react.iamrivas.com/', title: 'React' },
+		{ href: 'http://vue.iamrivas.com/', title: 'Vue' },
+		{ href: 'http://svelte.iamrivas.com/', title: 'SveltKit' },
+		{ href: 'http://ng.iamrivas.com/', title: 'Angular' },
+		{ href: 'http://d8.iamrivas.com/', title: 'Drupal' },
+		{ href: 'http://gatsby.iamrivas.com/', title: 'React/Drupal/Gatsby' }
+	];
 
 	SC.onFrame(() => {
 		spin += 0.01;
@@ -77,18 +86,11 @@
 </SC.Canvas>
 <section>
 	<ul>
-		<li>
-			<a href="http://react.iamrivas.com/">React</a>
-		</li>
-		<li>
-			<a href="http://gatsby.iamrivas.com/">React/Drupal/Gatsby</a>
-		</li>
-		<li>
-			<a href="http://vue.iamrivas.com/">Vue</a>
-		</li>
-		<li>
-			<a href="http://svelte.iamrivas.com/">Svelt</a>
-		</li>
+		{#each links as link}
+			<li>
+				<a href={link.href} target="_blank">{link.title}</a>
+			</li>
+		{/each}
 	</ul>
 </section>
 
