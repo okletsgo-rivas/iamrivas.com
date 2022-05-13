@@ -1,116 +1,110 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	// import { page } from '$app/stores';
+	import Fa from 'svelte-fa';
+	import { faGithub, faLinkedin, faPinterest } from '@fortawesome/free-brands-svg-icons';
+
 	import logo from './logo.svg';
+
+	const portLinks = [
+		{
+			title: 'View with Framework',
+			links: [
+				{ href: 'http://js.iamrivas.com/', title: 'Vanilla JS', enabled: false },
+				{ href: 'http://react.iamrivas.com/', title: 'React', enabled: true },
+				{ href: 'http://vue.iamrivas.com/', title: 'Vue', enabled: false },
+				{ href: 'http://svelte.iamrivas.com/', title: 'Svelte', enabled: false },
+				{ href: 'http://ng.iamrivas.com/', title: 'Angular', enabled: false },
+				{ href: 'http://d8.iamrivas.com/', title: 'Drupal', enabled: true }
+			]
+		},
+		{
+			title: 'View with SSR stack',
+			links: [
+				{ href: 'http://sveltekit.iamrivas.com/', title: 'SveltKit', enabled: false },
+				{ href: 'http://gatsby.iamrivas.com/', title: 'React / Drupal / Gatsby', enabled: true }
+			]
+		}
+	];
+
+	const socialLinks = [
+		{
+			title: 'Github',
+			icon: faGithub,
+			href: 'https://github.com/okletsgo-rivas'
+		},
+		{
+			title: 'LinkedIn',
+			icon: faLinkedin,
+			href: 'https://www.linkedin.com/in/johnrivas/'
+		},
+		{
+			title: 'Pinterest',
+			icon: faPinterest,
+			href: 'https://www.pinterest.com/johnrivas714'
+		}
+	];
 </script>
 
 <header>
 	<div class="corner">
-		<img src={logo} alt="SvelteKit" style="width:auto;height:50px" />
+		{#each socialLinks as link}
+			<a href={link.href} target="_blank">
+				<Fa icon={link.icon} size="2x" />
+			</a>
+		{/each}
 	</div>
 
-	<!-- <nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="/about">About</a>
-			</li>
-			<li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/todos">Todos</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav> -->
+	<img src={logo} alt="SvelteKit" style="width:auto;height:50px" />
+	<br />
+	<br />
 
-	<div class="corner">
-		<!-- TODO put something else here? github link? -->
-	</div>
+	<nav>
+		<h1 style="margin-top:0.5rem">Portfolio</h1>
+		{#each portLinks as group}
+			<strong>{group.title}</strong>
+			<ul style="margin:0.5rem 0 2rem 0">
+				{#each group.links as link}
+					<li>
+						<a href={link.href} target="_blank" class:disable={!link.enabled}>{link.title}</a>
+					</li>
+				{/each}
+			</ul>
+		{/each}
+	</nav>
 </header>
 
 <style>
 	header {
-		position: absolute;
-		z-index: 10;
-		display: flex;
-		justify-content: space-between;
 		width: 100%;
 	}
 
 	.corner {
-		width: 3em;
-		height: 3em;
+		margin-top: 1em;
+		float: right;
+		pointer-events: all;
 	}
 
-	.corner img {
-		margin: 1rem;
-		object-fit: contain;
+	.corner a {
+		margin-left: 1em;
 	}
-
 	nav {
-		display: flex;
-		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
+		display: inline-block;
+		padding: 1rem;
+		background: rgba(255, 255, 255, 0.5);
+		pointer-events: all;
 	}
 
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
+	a {
+		color: #666;
+		text-decoration: underline;
 	}
-
-	path {
-		fill: var(--background);
-	}
-
-	ul {
-		position: relative;
-		padding: 0;
-		margin: 0;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		list-style: none;
-		background: var(--background);
-		background-size: contain;
-	}
-
-	li {
-		position: relative;
-		height: 100%;
-	}
-
-	li.active::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--accent-color);
-	}
-
-	nav a {
-		display: flex;
-		height: 100%;
-		align-items: center;
-		padding: 0 1em;
-		color: var(--heading-color);
-		font-weight: 700;
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		text-decoration: none;
-		transition: color 0.2s linear;
-	}
-
 	a:hover {
-		color: var(--accent-color);
+		color: #000;
+	}
+
+	.disable {
+		color: #ccc;
+		pointer-events: none;
+		text-decoration: line-through;
 	}
 </style>

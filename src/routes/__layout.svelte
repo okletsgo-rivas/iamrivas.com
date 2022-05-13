@@ -1,44 +1,26 @@
 <script lang="ts">
+	import Background from '$lib/Background.svelte';
+	import Footer from '$lib/Footer.svelte';
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
 </script>
 
-<Header />
-
+<Background />
 <main>
+	<Header />
 	<slot />
+	<Footer />
 </main>
 
-<!-- <footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer> -->
 <style>
 	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
+		position: relative;
 		padding: 1rem;
 		width: 100%;
-		max-width: 1024px;
+		height: 100vh;
+		max-width: 960px;
 		margin: 0 auto;
 		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
+		pointer-events: none;
 	}
 </style>
