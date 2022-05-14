@@ -14,7 +14,7 @@
 				{ href: 'http://vue.iamrivas.com/', title: 'Vue', enabled: false },
 				{ href: 'http://svelte.iamrivas.com/', title: 'Svelte', enabled: false },
 				{ href: 'http://ng.iamrivas.com/', title: 'Angular', enabled: false },
-				{ href: 'http://d8.iamrivas.com/', title: 'Drupal', enabled: true }
+				{ href: 'http://d9.iamrivas.com/', title: 'Drupal', enabled: true }
 			]
 		},
 		{
