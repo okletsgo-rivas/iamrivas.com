@@ -29,20 +29,19 @@
 		"prettier-plugin-svelte": "^2.5.0",
 		"svelte": "^3.46.0",
 		"svelte-check": "^2.2.6",
+		"svelte-cubed": "^0.2.1",
 		"svelte-fa": "^2.4.0",
 		"svelte-preprocess": "^4.10.1",
+		"three": "^0.140.2",
 		"tslib": "^2.3.1",
-		"typescript": "~4.6.2",
-		"@tweenjs/tween.js": "^18.6.4",
-		"svelte-cubed": "^0.2.1",
-		"three": "^0.140.2"
+		"typescript": "~4.6.2"
 	},
 	"type": "module",
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
-		"@lukeed/uuid": "^2.0.0",
 		"@fortawesome/free-brands-svg-icons": "^5.8.1",
 		"@fortawesome/free-solid-svg-icons": "^5.8.1",
+		"@lukeed/uuid": "^2.0.0",
 		"cookie": "^0.4.1"
 	}
 }
