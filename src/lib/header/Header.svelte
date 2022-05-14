@@ -9,12 +9,12 @@
 		{
 			title: 'View with Framework',
 			links: [
-				{ href: 'http://js.iamrivas.com/', title: 'Vanilla JS', enabled: false },
-				{ href: 'http://react.iamrivas.com/', title: 'React', enabled: true },
-				{ href: 'http://vue.iamrivas.com/', title: 'Vue', enabled: false },
-				{ href: 'http://svelte.iamrivas.com/', title: 'Svelte', enabled: false },
-				{ href: 'http://ng.iamrivas.com/', title: 'Angular', enabled: false },
-				{ href: 'http://d9.iamrivas.com/', title: 'Drupal', enabled: true }
+				{ href: 'https://js.iamrivas.com/', title: 'Vanilla JS', enabled: false },
+				{ href: 'https://react.iamrivas.com/', title: 'React', enabled: true },
+				{ href: 'https://vue.iamrivas.com/', title: 'Vue', enabled: false },
+				{ href: 'https://svelte.iamrivas.com/', title: 'Svelte', enabled: false },
+				{ href: 'https://ng.iamrivas.com/', title: 'Angular', enabled: true },
+				{ href: 'https://d9.iamrivas.com/', title: 'Drupal', enabled: true }
 			]
 		},
 		{
