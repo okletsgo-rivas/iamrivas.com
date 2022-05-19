@@ -11,10 +11,10 @@
 			links: [
 				{ href: 'https://js.iamrivas.com/', title: 'Vanilla JS', enabled: false },
 				{ href: 'https://react.iamrivas.com/', title: 'React', enabled: true },
-				{ href: 'https://vue.iamrivas.com/', title: 'Vue', enabled: false },
+				{ href: 'http://vue.iamrivas.com/', title: 'Vue', enabled: true },
 				{ href: 'https://svelte.iamrivas.com/', title: 'Svelte', enabled: false },
-				{ href: 'https://ng.iamrivas.com/', title: 'Angular', enabled: true },
-				{ href: 'https://d9.iamrivas.com/', title: 'Drupal', enabled: true }
+				{ href: 'https://ng.iamrivas.com/', title: 'Angular 10 (WIP)', enabled: true },
+				{ href: 'https://d9.iamrivas.com/', title: 'Drupal (WIP)', enabled: true }
 			]
 		},
 		{
