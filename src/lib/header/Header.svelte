@@ -41,7 +41,7 @@
 				},
 				{
 					href: 'https://ng.iamrivas.com/',
-					title: 'Angular 10 (WIP)',
+					title: 'Angular',
 					icon: faAngular,
 					iconColor: '#D82C31',
 					enabled: true
