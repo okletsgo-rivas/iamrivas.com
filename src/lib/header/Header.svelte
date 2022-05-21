@@ -20,10 +20,10 @@
 			links: [
 				{
 					href: 'https://svelte.iamrivas.com/',
-					title: 'Svelte (WIP)',
+					title: 'Svelte',
 					icon: faJs,
 					iconColor: '#F5B21B',
-					enabled: false
+					enabled: true
 				},
 				{
 					href: 'https://react.iamrivas.com/',
