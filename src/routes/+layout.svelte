@@ -5,6 +5,10 @@
 	import '../app.css';
 </script>
 
+<svelte:head>
+	<title>i am RIVAS</title>
+</svelte:head>
+
 <Background />
 <main>
 	<Header />
