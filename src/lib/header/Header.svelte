@@ -20,42 +20,35 @@
 			links: [
 				{
 					href: 'https://svelte.iamrivas.com/',
-					title: 'Svelte',
+					title: 'Svelte 3',
 					icon: faJs,
 					iconColor: '#F5B21B',
 					enabled: true
 				},
 				{
 					href: 'https://react.iamrivas.com/',
-					title: 'React',
+					title: 'React 16',
 					icon: faReact,
 					iconColor: '#60D8FB',
 					enabled: true
 				},
 				{
 					href: 'http://vue.iamrivas.com/',
-					title: 'Vue',
+					title: 'Vue 3',
 					icon: faVuejs,
 					iconColor: '#40B783',
 					enabled: true
 				},
 				{
 					href: 'https://ng.iamrivas.com/',
-					title: 'Angular',
+					title: 'Angular 13',
 					icon: faAngular,
 					iconColor: '#D82C31',
 					enabled: true
 				},
 				{
-					href: 'https://js.iamrivas.com/',
-					title: 'Vanilla JS (WIP)',
-					icon: faJs,
-					iconColor: '#F5B21B',
-					enabled: false
-				},
-				{
-					href: 'https://d9.iamrivas.com/',
-					title: 'Drupal (WIP)',
+					href: 'https://d10.iamrivas.com/',
+					title: 'Drupal 10 (WIP)',
 					icon: faDrupal,
 					iconColor: '#098ACE',
 					enabled: true
@@ -67,7 +60,7 @@
 			links: [
 				{
 					href: 'http://sveltekit.iamrivas.com/',
-					title: 'SveltKit',
+					title: 'SveltKit 1 (WIP)',
 					icon: faJs,
 					iconColor: '#F5B21B',
 					enabled: false
